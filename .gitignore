@@ -1,0 +1,48 @@
+# ---- R / RStudio ----
+.Rhistory
+.Rapp.history
+.RData
+.RDataTmp*
+*.RDataTmp*
+.Rproj.user/
+*.Rproj
+
+# ---- 原始数据（体积大，不入库；请自行从原始来源获取）----
+*.rds
+*.rda
+*.RData
+*.h5
+*.h5ad
+*.loom
+scRNA.RData
+HuMicA.rds
+YaqiaoLi_data.RData
+GSE174367_snRNA-seq_filtered_feature_bc_matrix.h5
+GSE174367_*
+
+# ---- 中间缓存 ----
+NicheNet_cache/
+aggregate_src.R
+sigpath_src.R
+lfc_celltype_src.R
+
+# ---- 运行日志 / 临时文件 ----
+*.log
+.dsh-office-*/
+Rplots.pdf
+
+# ---- 第三方仓库 / 便携工具 ----
+tools/
+official_test/
+
+# ---- 结果目录（图多且大；只保留顶层汇总图，见下）----
+NicheNet_results*/
+!NicheNet_results_7subtypes/*/SUMMARY_*.png
+NicheNet_results_7subtypes/*/receiver_*/
+NicheNet_results_7subtypes/*/ALL_receivers_*.csv
+NicheNet_results_7subtypes/*/run_log.txt
+
+# ---- OS ----
+Thumbs.db
+desktop.ini
+.DS_Store
