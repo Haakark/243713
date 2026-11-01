@@ -70,6 +70,17 @@ NicheNet_results_7subtypes/<时间戳>/      结果（仅提交汇总图与汇�
 - 21122021 版 `lr_network` 未收录 LY86–TLR4
 - NicheNet 结果为基于先验网络的相关性推断，需功能实验验证
 
+## 官方 nichenetr 代码重做（2026-11-01）
+
+用 `saeyslab/nichenetr` 的 `nichenet_seuratobj_aggregate()` 对 7 个亚型重跑了一遍：
+
+- 结果：`official_nichenet_results/20261101_2125/`（每个亚型 7 张图 + 4 张表）
+- 说明与对比：`official_nichenet_results/20261101_2125/README_official_redo.md`
+- 方向性 AUPR：`official_aupr_directional/`
+
+要点：官方默认用“全部 DE 基因 + AUPR”，本数据 DE 占表达基因 53%，AUPR 基线过高（`aupr_corrected` 仅 −0.02~0.015），
+排序趋近噪声；改用方向性 top200 基因集后，**TGFB1 下调** 在 Pearson 与 AUPR 下都稳定，而 **LY86 上调第一** 仅在 Pearson 下成立。
+
 ## License
 
 仅供学术研究使用。数据版权归原始研究作者所有，请遵循各数据集的使用条款。
